@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+.env*.local
+.vercel
+*.log
+docx_extract/
+horse_build_spec.zip
+spec_text.txt

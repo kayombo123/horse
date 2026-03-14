@@ -1,0 +1,119 @@
+/* Horse Tech — Design tokens & base styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Color tokens */
+  --color-primary: #0A84E8;
+  --color-dark: #0D0D0D;
+  --color-light: #F5F7FA;
+  --color-white: #FFFFFF;
+  --color-muted: #888888;
+  --color-success: #1A8A4A;
+  --color-danger: #CC2200;
+
+  /* Typography */
+  --font-heading: 'Inter', 'DM Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --text-base: 16px;
+  --line-body: 1.6;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Component tokens */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 24px rgba(10, 132, 232, 0.08);
+  --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--line-body);
+  color: var(--color-dark);
+  background: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Section padding */
+section {
+  padding-block: var(--space-xl);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin: 0 0 var(--space-sm);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--color-dark);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.625rem);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+/* Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+@import 'components/nav.css';
+@import 'components/hero.css';
+@import 'components/cards.css';

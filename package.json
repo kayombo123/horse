@@ -1,0 +1,18 @@
+{
+  "name": "horse",
+  "version": "1.0.0",
+  "description": "Horse Tech — Technology is awesome. B2B tech company website.",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site — no build step'",
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "@sendgrid/mail": "^8.1.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
